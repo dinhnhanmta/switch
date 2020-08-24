@@ -1,0 +1,273 @@
+52:3:Engine Intercooler Temperature:Voltage Above Normal
+52:4:Engine Intercooler Temperature:Voltage Below Normal
+52:15:Engine Intercooler Temperature:High - Least Severe (1)
+52:16:Engine Intercooler Temperature:High - Moderately Severe (2)
+52:0:Engine Intercooler Temperature:High - Most Severe (3)
+91:3:Accelerator Pedal Position 1:Voltage Above Normal
+91:4:Accelerator Pedal Position 1:Voltage Below Normal
+91:8:Accelerator Pedal Position 1:Abnormal Frequency, Pulse Width, or Period
+94:16:Engine Fuel Delivery Pressure:High - Moderately Severe (2)
+95:15:Engine Fuel Filter Differential Pressure:High - Least Severe (1)
+95:16:Engine Fuel Filter Differential Pressure:High - Moderately Severe (2)
+95:0:Engine Fuel Filter Differential Pressure:High - Most Severe (3)
+95:2:Engine Fuel Filter Differential Pressure:Erractic, Intermittent, or Incorrect
+99:15:Engine Oil Filter Differential Pressure:High - Least Severe (1)
+99:16:Engine Oil Filter Differential Pressure:High - Moderately Severe (2)
+99:0:Engine Oil Filter Differential Pressure:High - Most Severe (3)
+99:2:Engine Oil Filter Differential Pressure:Erractic, Intermittent, or Incorrect
+100:3:Engine Oil Pressure:Voltage Above Normal
+100:4:Engine Oil Pressure:Voltage Below Normal
+100:17:Engine Oil Pressure:Low - Least Severe (1)
+100:18:Engine Oil Pressure:Low - Moderately Severe (2)
+100:1:Engine Oil Pressure:Low - Most Severe (3)
+101:3:Engine Crankcase Pressure:Voltage Above Normal
+101:4:Engine Crankcase Pressure:Voltage Below Normal
+101:13:Engine Crankcase Pressure:Calibration Required
+101:15:Engine Crankcase Pressure:High - Least Severe (1)
+101:16:Engine Crankcase Pressure:High - Moderately Severe (2)
+101:0:Engine Crankcase Pressure:High - Most Severe (3)
+107:15:Engine Air Filter 1 Differential Pressure:High - Most Severe (3)
+107:16:Engine Air Filter 1 Differential Pressure:High - Moderately Severe (2)
+108:3:Barometric Pressure:Voltage Above Normal
+108:4:Barometric Pressure:Voltage Below Normal
+108:21:Barometric Pressure:Data Drifted Low
+110:3:Engine Coolant Temperature:Voltage Above Normal
+110:4:Engine Coolant Temperature:Voltage Below Normal
+110:15:Engine Coolant Temperature:High - Least Severe (1)
+110:16:Engine Coolant Temperature:High - Moderately Severe (2)
+110:0:Engine Coolant Temperature:High - Most Severe (3)
+110:17:Engine Coolant Temperature:Low - Least Severe (1)
+110:18:Engine Coolant Temperature:Low - Moderately Severe (2)
+110:1:Engine Coolant Temperature:Low - Most Severe (3)
+111:17:Engine Coolant Level:Low - Least Severe (1)
+111:18:Engine Coolant Level:Low - Moderately Severe (2)
+111:1:Engine Coolant Level:Low - Most Severe (3)
+168:3:Battery Potential / Power Input 1:Voltage Above Normal
+168:4:Battery Potential / Power Input 1:Voltage Below Normal
+173:9:Engine Exhaust Temperature Gas:Abnormal Update Rate
+175:15:Engine Oil Temperature 1:High - Least Severe (1)
+175:16:Engine Oil Temperature 1:High - Moderately Severe (2)
+175:0:Engine Oil Temperature 1:High - Most Severe (3)
+175:3:Engine Oil Temperature 1:Voltage Above Normal
+175:4:Engine Oil Temperature 1:Voltage Below Normal
+190:15:Engine Speed:High - Least Severe (1)
+190:0:Engine Speed:High - Most Severe (3)
+190:8:Engine Speed:Abnormal Frequency, Pulse Width, or Period
+190:1:Engine Speed:Low - Most Severe (3)
+234:2:Software Identification:Erratic, Intermittent, or Incorrect
+234:14:Software Identification:Special Instruction
+430:5:Engine Starter Solenoid Voltage:Current Below Normal
+430:6:Engine Starter Solenoid Voltage:Current Above Normal
+630:2:Calibration Memory:Erratic, Intermittent, or Incorrect
+631:2:Calibration Module:Erratic, Intermittent, or Incorrect
+632:5:Engine Fuel Shutoff Valve 1:Current Below Normal
+632:6:Engine Fuel Shutoff Valve 1:Current Above Normal
+632:7:Engine Fuel Shutoff Valve 1:Not Responding Properly
+637:13:Engine Timing Sensor:Calibration Required
+639:9:J1939 Network #1 : Abnormal Update Rate
+651:5:Engine Injector Cylinder #01:Current Below Normal
+651:6:Engine Injector Cylinder #01:Current Above Normal
+652:5:Engine Injector Cylinder #02:Current Below Normal
+652:6:Engine Injector Cylinder #02:Current Above Normal
+653:5:Engine Injector Cylinder #03:Current Below Normal
+653:6:Engine Injector Cylinder #03:Current Above Normal
+654:5:Engine Injector Cylinder #04:Current Below Normal
+654:6:Engine Injector Cylinder #04:Current Above Normal
+655:5:Engine Injector Cylinder #05:Current Below Normal
+655:6:Engine Injector Cylinder #05:Current Above Normal
+656:5:Engine Injector Cylinder #06:Current Below Normal
+656:6:Engine Injector Cylinder #06:Current Above Normal
+657:5:Engine Injector Cylinder #07:Current Below Normal
+657:6:Engine Injector Cylinder #07:Current Above Normal
+658:5:Engine Injector Cylinder #08:Current Below Normal
+658:6:Engine Injector Cylinder #08:Current Above Normal
+659:5:Engine Injector Cylinder #09:Current Below Normal
+659:6:Engine Injector Cylinder #09:Current Above Normal
+660:5:Engine Injector Cylinder #10:Current Below Normal
+660:6:Engine Injector Cylinder #10:Current Above Normal
+661:5:Engine Injector Cylinder #11:Current Below Normal
+661:6:Engine Injector Cylinder #11:Current Above Normal
+662:5:Engine Injector Cylinder #12:Current Below Normal
+662:6:Engine Injector Cylinder #12:Current Above Normal
+663:5:Engine Injector Cylinder #13:Current Below Normal
+663:6:Engine Injector Cylinder #13:Current Above Normal
+664:5:Engine Injector Cylinder #14:Current Below Normal
+664:6:Engine Injector Cylinder #14:Current Above Normal
+665:5:Engine Injector Cylinder #15:Current Below Normal
+665:6:Engine Injector Cylinder #15:Current Above Normal
+666:5:Engine Injector Cylinder #16:Current Below Normal
+666:6:Engine Injector Cylinder #16:Current Above Normal
+677:5:Engine Starter Motor Relay:Current Below Normal
+677:6:Engine Starter Motor Relay:Current Above Normal
+678:3:ECU 8 Volts DC Supply:Voltage Above Normal
+678:4:ECU 8 Volts DC Supply:Voltage Below Normal
+970:2:Engine Auxiliary Engine Shutdown Switch:Erratic, Intermittent, or Incorrect
+970:31:Engine Auxiliary Engine Shutdown Switch:Condition Exists
+971:31:Engine Derate Switch:Condition Exists
+1137:15:Engine Exhaust Gas Port 1 Temperature:High - Least Severe (1)
+1137:0:Engine Exhaust Gas Port 1 Temperature:High - Most Severe (3)
+1137:19:Engine Exhaust Gas Port 1 Temperature:Data Error
+1138:15:Engine Exhaust Gas Port 2 Temperature:High - Least Severe (1)
+1138:0:Engine Exhaust Gas Port 2 Temperature:High - Most Severe (3)
+1138:19:Engine Exhaust Gas Port 2 Temperature:Data Error
+1139:15:Engine Exhaust Gas Port 3 Temperature:High - Least Severe (1)
+1139:0:Engine Exhaust Gas Port 3 Temperature:High - Most Severe (3)
+1139:19:Engine Exhaust Gas Port 3 Temperature:Data Error
+1140:15:Engine Exhaust Gas Port 4 Temperature:High - Least Severe (1)
+1140:0:Engine Exhaust Gas Port 4 Temperature:High - Most Severe (3)
+1140:19:Engine Exhaust Gas Port 4 Temperature:Data Error
+1141:15:Engine Exhaust Gas Port 5 Temperature:High - Least Severe (1)
+1141:0:Engine Exhaust Gas Port 5 Temperature:High - Most Severe (3)
+1141:19:Engine Exhaust Gas Port 5 Temperature:Data Error
+1142:15:Engine Exhaust Gas Port 6 Temperature:High - Least Severe (1)
+1142:0:Engine Exhaust Gas Port 6 Temperature:High - Most Severe (3)
+1142:19:Engine Exhaust Gas Port 6 Temperature:Data Error
+1143:15:Engine Exhaust Gas Port 7 Temperature:High - Least Severe (1)
+1143:0:Engine Exhaust Gas Port 7 Temperature:High - Most Severe (3)
+1143:19:Engine Exhaust Gas Port 7 Temperature:Data Error
+1144:15:Engine Exhaust Gas Port 8 Temperature:High - Least Severe (1)
+1144:0:Engine Exhaust Gas Port 8 Temperature:High - Most Severe (3)
+1144:19:Engine Exhaust Gas Port 8 Temperature:Data Error
+1145:15:Engine Exhaust Gas Port 9 Temperature:High - Least Severe (1)
+1145:0:Engine Exhaust Gas Port 9 Temperature:High - Most Severe (3)
+1145:19:Engine Exhaust Gas Port 9 Temperature:Data Error
+1146:15:Engine Exhaust Gas Port 10 Temperature:High - Least Severe (1)
+1146:0:Engine Exhaust Gas Port 10 Temperature:High - Most Severe (3)
+1146:19:Engine Exhaust Gas Port 10 Temperature:Data Error
+1147:15:Engine Exhaust Gas Port 11 Temperature:High - Least Severe (1)
+1147:0:Engine Exhaust Gas Port 11 Temperature:High - Most Severe (3)
+1147:19:Engine Exhaust Gas Port 11 Temperature:Data Error
+1148:15:Engine Exhaust Gas Port 12 Temperature:High - Least Severe (1)
+1148:0:Engine Exhaust Gas Port 12 Temperature:High - Most Severe (3)
+1148:19:Engine Exhaust Gas Port 12 Temperature:Data Error
+1149:15:Engine Exhaust Gas Port 13 Temperature:High - Least Severe (1) 
+1149:0:Engine Exhaust Gas Port 13 Temperature:High - Most Severe (3)
+1149:19:Engine Exhaust Gas Port 13 Temperature:Data Error
+1150:15:Engine Exhaust Gas Port 14 Temperature:High - Least Severe (1)
+1150:0:Engine Exhaust Gas Port 14 Temperature:High - Most Severe (3)
+1150:19:Engine Exhaust Gas Port 14 Temperature:Data Error
+1151:15:Engine Exhaust Gas Port 15 Temperature:High - Least Severe (1)
+1151:0:Engine Exhaust Gas Port 15 Temperature:High - Most Severe (3)
+1151:19:Engine Exhaust Gas Port 15 Temperature:Data Error
+1152:15:Engine Exhaust Gas Port 16 Temperature:High - Least Severe (1)
+1152:0:Engine Exhaust Gas Port 16 Temperature:High - Most Severe (3)
+1152:19:Engine Exhaust Gas Port 16 Temperature:Data Error
+1176:3:Engine Turbocharger 1 Compressor Inlet Pressure:Voltage Above Normal
+1176:4:Engine Turbocharger 1 Compressor Inlet Pressure:Voltage Below Normal
+1177:3:Engine Turbocharger 2 Compressor Inlet Pressure:Voltage Above Normal
+1177:4:Engine Turbocharger 2 Compressor Inlet Pressure:Voltage Below Normal
+1180:3:Engine Turbocharger 1 Turbine Inlet Temperature:Voltage Above Normal
+1180:4:Engine Turbocharger 1 Turbine Inlet Temperature:Voltage Below Normal
+1180:8:Engine Turbocharger 1 Turbine Inlet Temperature:Abnormal Frequency, Pulse Width, or Period
+1180:15:Engine Turbocharger 1 Turbine Inlet Temperature:High - Least Severe (1)
+1180:16:Engine Turbocharger 1 Turbine Inlet Temperature:High - Moderately Severe (2)
+1180:0:Engine Turbocharger 1 Turbine Inlet Temperature:High - Most Severe (3)
+1181:3:Engine Turbocharger 2 Turbine Inlet Temperature:Voltage Above Normal
+1181:4:Engine Turbocharger 2 Turbine Inlet Temperature:Voltage Below Normal
+1181:8:Engine Turbocharger 2 Turbine Inlet Temperature:Abnormal Frequency, Pulse Width, or Period
+1181:15:Engine Turbocharger 2 Turbine Inlet Temperature:High - Least Severe (1)
+1181:16:Engine Turbocharger 2 Turbine Inlet Temperature:High - Moderately Severe (2)
+1181:0:Engine Turbocharger 2 Turbine Inlet Temperature:High - Most Severe (3)
+1208:3:Engine Pre-filter Oil Pressure:Voltage Above Normal
+1208:4:Engine Pre-filter Oil Pressure:Voltage Below Normal
+1231:9:J1939 Network #2:Abnormal Update Rate
+1231:14:J1939 Network #2:Special Instruction
+1237:31:Engine Shutdown Override Switch:Conditions Exist
+1352:19:Engine Cylinder #1 Knock Level:Data Error
+1352:3:Engine Cylinder #1 Knock Level:Voltage Above Normal
+1352:4:Engine Cylinder #1 Knock Level:Voltage Below Normal
+1352:15:Engine Cylinder #1 Knock Level:Data High
+1353:19:Engine Cylinder #2 Knock Level:Data Error
+1353:3:Engine Cylinder #2 Knock Level:Voltage Above Normal
+1353:4:Engine Cylinder #2 Knock Level:Voltage Below Normal
+1353:15:Engine Cylinder #2 Knock Level:Data High
+1354:19:Engine Cylinder #3 Knock Level:Data Error
+1354:3:Engine Cylinder #3 Knock Level:Voltage Above Normal
+1354:4:Engine Cylinder #3 Knock Level:Voltage Below Normal
+1354:15:Engine Cylinder #3 Knock Level:Data High
+1355:19:Engine Cylinder #4 Knock Level:Data Error
+1355:3:Engine Cylinder #4 Knock Level:Voltage Above Normal
+1355:4:Engine Cylinder #4 Knock Level:Voltage Below Normal
+1355:15:Engine Cylinder #4 Knock Level:Data High
+1356:19:Engine Cylinder #5 Knock Level:Data Error
+1356:3:Engine Cylinder #5 Knock Level:Voltage Above Normal
+1356:4:Engine Cylinder #5 Knock Level:Voltage Below Normal
+1356:15:Engine Cylinder #5 Knock Level:Data High
+1357:19:Engine Cylinder #6 Knock Level:Data Error
+1357:3:Engine Cylinder #6 Knock Level:Voltage Above Normal
+1357:4:Engine Cylinder #6 Knock Level:Voltage Below Normal
+1357:15:Engine Cylinder #6 Knock Level:Data High
+1358:19:Engine Cylinder #7 Knock Level:Data Error
+1358:3:Engine Cylinder #7 Knock Level:Voltage Above Normal
+1358:4:Engine Cylinder #7 Knock Level:Voltage Below Normal
+1358:15:Engine Cylinder #7 Knock Level:Data High
+1359:19:Engine Cylinder #8 Knock Level:Data Error
+1359:3:Engine Cylinder #8 Knock Level:Voltage Above Normal
+1359:4:Engine Cylinder #8 Knock Level:Voltage Below Normal
+1359:15:Engine Cylinder #8 Knock Level:Data High
+1360:19:Engine Cylinder #9 Knock Level:Data Error
+1360:3:Engine Cylinder #9 Knock Level:Voltage Above Normal
+1360:4:Engine Cylinder #9 Knock Level:Voltage Below Normal
+1360:15:Engine Cylinder #9 Knock Level:Data High
+1361:19:Engine Cylinder #10 Knock Level:Data Error
+1361:3:Engine Cylinder #10 Knock Level:Voltage Above Normal
+1361:4:Engine Cylinder #10 Knock Level:Voltage Below Normal
+1361:15:Engine Cylinder #10 Knock Level:Data High
+1362:19:Engine Cylinder #11 Knock Level:Data Error
+1362:3:Engine Cylinder #11 Knock Level:Voltage Above Normal
+1362:4:Engine Cylinder #11 Knock Level:Voltage Below Normal
+1362:15:Engine Cylinder #11 Knock Level:Data High
+1363:19:Engine Cylinder #12 Knock Level:Data Error
+1363:3:Engine Cylinder #12 Knock Level:Voltage Above Normal
+1363:4:Engine Cylinder #12 Knock Level:Voltage Below Normal
+1363:15:Engine Cylinder #12 Knock Level:Data High
+1364:19:Engine Cylinder #13 Knock Level:Data Error
+1364:3:Engine Cylinder #13 Knock Level:Voltage Above Normal
+1364:4:Engine Cylinder #13 Knock Level:Voltage Below Normal
+1364:15:Engine Cylinder #13 Knock Level:Data High
+1365:19:Engine Cylinder #14 Knock Level:Data Error
+1365:3:Engine Cylinder #14 Knock Level:Voltage Above Normal
+1365:4:Engine Cylinder #14 Knock Level:Voltage Below Normal
+1365:15:Engine Cylinder #14 Knock Level:Data High
+1366:19:Engine Cylinder #15 Knock Level:Data Error
+1366:3:Engine Cylinder #15 Knock Level:Voltage Above Normal
+1366:4:Engine Cylinder #15 Knock Level:Voltage Below Normal
+1366:15:Engine Cylinder #15 Knock Level:Data High
+1367:19:Engine Cylinder #16 Knock Level:Data Error
+1367:3:Engine Cylinder #16 Knock Level:Voltage Above Normal
+1367:4:Engine Cylinder #16 Knock Level:Voltage Below Normal
+1367:15:Engine Cylinder #16 Knock Level:Data High
+1390:3:Engine Fuel Valve #1 Inlet Absolute Pressure:Voltage Above Normal
+1390:4:Engine Fuel Valve #1 Inlet Absolute Pressure:Voltage Below Normal
+1390:15:Engine Fuel Valve #1 Inlet Absolute Pressure:High - Least Severe (1)
+1390:17:Engine Fuel Valve #1 Inlet Absolute Pressure:Low - Least Severe (1)
+1442:9:Engine Fuel Valve #1 Position:Abnormal Update Rate
+1656:2:Engine Automatic Start Enable Switch:Erratic, Intermittent, or Incorrect
+1664:31:Engine Automatic Start Failed:Condition Exists
+2241:9:Source Address 241:Abnormal Update Rate
+2452:3:Generator Total Real Power:Voltage Above Normal
+2452:8:Generator Total Real Power:Abnormal Frequency, Pulse Width, or Period
+2452:9:Generator Total Real Power:Abnormal Update Rate
+2452:13:Generator Total Real Power:Calibration Required
+2809:15:Engine Air Filter 2 Differential Pressure:High - Least Severe (1)
+2809:16:Engine Air Filter 2 Differential Pressure:High - Moderately Severe (2)
+2813:5:Engine Air Shutoff Command Status:Current Below Normal
+2813:6:Engine Air Shutoff Command Status:Current Above Normal
+3509:3:Sensor Supply Voltage 1:Voltage Above Normal
+3509:4:Sensor Supply Voltage 1:Voltage Below Normal
+3510:3:Sensor Supply Voltage 2:Voltage Above Normal
+3510:4:Sensor Supply Voltage 2:Voltage Below Normal
+3563:3:Engine Intake Manifold #1 Absolute Pressure:Voltage Above Normal
+3563:4:Engine Intake Manifold #1 Absolute Pressure:Voltage Below Normal
+3563:13:Engine Intake Manifold #1 Absolute Pressure:Calibration Required
+3563:21:Engine Intake Manifold #1 Absolute Pressure:Data Drifted Low
+5418:7:Engine Fuel Actuator #1:Not Responding Properly
+5418:12:Engine Fuel Actuator #1:Failure
+5578:3:Engine Fuel Delivery Absolute Pressue:Voltage Above Normal
+5578:4:Engine Fuel Delivery Absolute Pressue:Voltage Below Normal
+5578:21:Engine Fuel Delivery Absolute Pressue:Data Drifted Low
+5580:3:Engine Filtered Fuel Delivery Absolute Pressure:Voltage Above Normal
+5580:4:Engine Filtered Fuel Delivery Absolute Pressure:Voltage Below Normal
+5580:17:Engine Filtered Fuel Delivery Absolute Pressure:Low - Least Severe (1)
+5580:18:Engine Filtered Fuel Delivery Absolute Pressure:Low - Moderately Severe (2)
+5580:21:Engine Filtered Fuel Delivery Absolute Pressure:Data Drifted Low

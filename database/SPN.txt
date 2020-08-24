@@ -1,0 +1,95 @@
+52,Engine Intercooler Temperature
+91,Accelerator Pedal Position 1
+94,Engine Fuel Delivery Pressure
+95,Engine Fuel Filter Differential Pressure
+99,Engine Oil Filter Differential Pressure
+100,Engine Oil Pressure
+101,Engine Crankcase Pressure
+107,Engine Air Filter 1 Differential Pressure
+108,Barometric Pressure
+110,Engine Coolant Temperature
+111,Engine Coolant Level
+168,Battery Potential / Power Input 1
+173,Engine Exhaust Temperature Gas
+175,Engine Oil Temperature 1
+190,Engine Speed
+234,Software Identification
+430,Engine Starter Solenoid Voltage
+630,Calibration Memory
+631,Calibration Module
+632,Engine Fuel Shutoff Valve 1
+637,Engine Timing Sensor
+639,J1939 Network #1
+651,Engine Injector Cylinder #01
+652,Engine Injector Cylinder #02
+653,Engine Injector Cylinder #03
+654,Engine Injector Cylinder #04
+655,Engine Injector Cylinder #05
+656,Engine Injector Cylinder #06
+657,Engine Injector Cylinder #07
+658,Engine Injector Cylinder #08
+659,Engine Injector Cylinder #09
+660,Engine Injector Cylinder #10
+661,Engine Injector Cylinder #11
+662,Engine Injector Cylinder #12
+663,Engine Injector Cylinder #13
+664,Engine Injector Cylinder #14
+665,Engine Injector Cylinder #15
+666,Engine Injector Cylinder #16
+677,Engine Starter Motor Relay
+678,ECU 8 Volts DC Supply
+970,Engine Auxiliary Engine
+971,Engine Derate Switch
+1137,Engine Exhaust Gas Port 1
+1138,Engine Exhaust Gas Port 2
+1139,Engine Exhaust Gas Port 3
+1140,Engine Exhaust Gas Port 4
+1141,Engine Exhaust Gas Port 5
+1142,Engine Exhaust Gas Port 6
+1143,Engine Exhaust Gas Port 7
+1144,Engine Exhaust Gas Port 8
+1145,Engine Exhaust Gas Port 9
+1146,Engine Exhaust Gas Port 10
+1147,Engine Exhaust Gas Port 11
+1148,Engine Exhaust Gas Port 12
+1149,Engine Exhaust Gas Port 13
+1150,Engine Exhaust Gas Port 14
+1151,Engine Exhaust Gas Port 15
+1152,Engine Exhaust Gas Port 16
+1176,Engine Turbocharger 1
+1177,Engine Turbocharger 2
+1180,Engine Turbocharger 1
+1181,Engine Turbocharger 2
+1208,Engine Pre-filter Oil Pressure
+1231,J1939 Network #2
+1237,Engine Shutdown Override Switch
+1352,Engine Cylinder #1 Knock Level
+1353,Engine Cylinder #2 Knock Level
+1354,Engine Cylinder #3 Knock Level
+1355,Engine Cylinder #4 Knock Level
+1356,Engine Cylinder #5 Knock Level
+1357,Engine Cylinder #6 Knock Level
+1358,Engine Cylinder #7 Knock Level
+1359,Engine Cylinder #8 Knock Level
+1360,Engine Cylinder #9 Knock Level
+1361,Engine Cylinder #10 Knock Level
+1362,Engine Cylinder #11 Knock Level
+1363,Engine Cylinder #12 Knock Level
+1364,Engine Cylinder #13 Knock Level
+1365,Engine Cylinder #14 Knock Level
+1366,Engine Cylinder #15 Knock Level
+1367,Engine Cylinder #16 Knock Level
+1390,Engine Fuel Valve #1 Inlet Absolute Pressure
+1442,Engine Fuel Valve #1 Position
+1656,Engine Automatic Start Enable Switch
+1664,Engine Automatic Start Failed
+2241,Source Address 241
+2452,Generator Total Real Power
+2809,Engine Air Filter 2 Differential Pressure
+2813,Engine Air Shutoff Command Status
+3509,Sensor Supply Voltage 1
+3510,Sensor Supply Voltage 2
+3563,Engine Intake Manifold #1 Absolute Pressure
+5418,Engine Fuel Actuator #1
+5578,Engine Fuel Delivery Absolute Pressue
+5580,Engine Filtered Fuel Delivery Absolute Pressure

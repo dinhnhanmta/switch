@@ -1,0 +1,34 @@
+00,Data is above the normal range.    
+01,Data is below the normal range.    
+02,Incorrect signal    
+03,Voltage is above the normal range.    
+04,Voltage is below the normal range.    
+05,Current is below the normal range.    
+06,Current is above the normal range.    
+08,Abnormal signal    
+09,Abnormal update    
+12,A device or a component failed.    
+13,A component is out of calibration.    
+14,Special instructions    
+15,Data valid but above normal operating range - Least severe level.    
+16,Data valid but above normal operating range - Moderately severe level.    
+17,Data valid but below normal operating range - Least severe level.    
+18,Data valid but below normal operating range - Moderately severe level.    
+21,Data drift low    
+31,Condition exists    
+
+
+52:3:Engine Intercooler Temperature:Voltage Above Normal 
+
+52-3
+Engine Intercooler Temperature : Voltage Above Normal    
+52-4
+Engine Intercooler Temperature : Voltage Below Normal    
+52-15
+Engine Intercooler Temperature : High - Least Severe (1)    
+52-16
+Engine Intercooler Temperature : High - Moderately Severe (2)    
+52-0
+Engine Intercooler Temperature : High - Most Severe (3)    
+91-3
+Accelerator Pedal Position 1 : Voltage Above Normal      
