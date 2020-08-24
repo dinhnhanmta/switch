@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Gauge.qml</file>
+        <file>FourGauge.qml</file>
+        <file>Parameter.qml</file>
+        <file>CurrentEngineTotal.qml</file>
+        <file>FiveGauge.qml</file>
+        <file>EngineSpeed.qml</file>
+        <file>MainMenu.qml</file>
+        <file>dentrang.jpg</file>
+        <file>TauSixGauge.qml</file>
+        <file>TauEngineSpeed.qml</file>
+        <file>TauSevenGauge.qml</file>
+        <file>TauThreeGauge.qml</file>
+        <file>Error.qml</file>
+    </qresource>
+</RCC>
