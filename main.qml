@@ -7,7 +7,7 @@ Window {
     visible: true
     width: 1028
     height: 640
-    color: button.night_mode===false? "white":"#808080"
+    color: button.night_mode===false? "white":"black"
 
 
     CurrentEngineTotal {
@@ -35,7 +35,7 @@ Window {
         x: 184
         y: 140
         z: 1
-         visible: Modbus.q_errVisible;
+        visible: Modbus.q_errVisible;
 
     }
 

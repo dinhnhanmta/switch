@@ -7,8 +7,8 @@ import QtQuick.Extras 1.4
 
 Item{
 
-    width: 800
-    height: 480
+    width: 1024
+    height: 600
     CircularGauge {
     id: gaugeMain
     x: -13
@@ -30,7 +30,7 @@ Item{
                            ctx.reset();
 
                            ctx.beginPath();
-                           ctx.strokeStyle = "#808080";
+                           ctx.strokeStyle = "black";
                            ctx.lineWidth = outerRadius * 0.05;
 
                            ctx.arc(outerRadius, outerRadius, outerRadius - ctx.lineWidth / 2,
@@ -47,26 +47,26 @@ Item{
             implicitWidth: outerRadius * 0.03
             implicitHeight: outerRadius * 0.9
             antialiasing: true
-            color:  "#808080"
+            color:  "black"
         }
         tickmark: Rectangle {
                         visible: styleData.value < 80 || styleData.value % 10 == 0
                         implicitWidth: outerRadius * 0.02
                         antialiasing: true
                         implicitHeight: outerRadius * 0.06
-                        color:  "#808080"
+                        color:  "black"
                     }
         minorTickmark: Rectangle {
                         visible: styleData.value < 0
                         implicitWidth: outerRadius * 0.01
                         antialiasing: true
                         implicitHeight: outerRadius * 0.03
-                        color: "#808080"
+                        color: "black"
                     }
         tickmarkLabel:  Text {
             font.pixelSize: 28
             text: styleData.value
-            color: "#808080"
+            color: "black"
             antialiasing: true
         }
         minimumValueAngle: -135
@@ -82,7 +82,7 @@ Item{
 
     Text {
                 id: x100
-                color: "#808080"
+                color: "black"
                 text: "x100"
                 font.pointSize: 18
                 anchors.bottom: parent.verticalCenter
@@ -91,7 +91,7 @@ Item{
         }
     Text {
                 id: rpm
-                color: "#808080"
+                color: "black"
                 text: "RPM"
                 font.pointSize: 18
                 anchors.top: parent.verticalCenter
@@ -102,7 +102,7 @@ Item{
                 id: rpmValue
                 width: 151
                 height: 79
-                color: "#808080"
+                color: "black"
                 text: gaugeMain.value*100
                 font.pointSize: 51
                 anchors.top: rpm.bottom
@@ -119,7 +119,7 @@ Item{
         id: text3
         x: 8
         y: 361
-        color: "#808080"
+        color: "black"
         text: qsTr("Coolant Temp")
         font.family: "Times New Roman"
         font.pixelSize: 18
@@ -129,7 +129,7 @@ Item{
         id: text5
         x: 127
         y: 411
-        color: "#808080"
+        color: "black"
         text: qsTr("DEG C")
         font.pixelSize: 22
     }
@@ -138,7 +138,7 @@ Item{
         id: text6
         x: 65
         y: 382
-        color: "#808080"
+        color: "black"
         text: qsTr("81")
         font.pixelSize: 51
     }
@@ -147,7 +147,7 @@ Item{
             id: text4
             x: 206
             y: 361
-            color: "#808080"
+            color: "black"
             text: qsTr("Oil Press")
             font.pixelSize: 18
         }
@@ -156,7 +156,7 @@ Item{
             id: text7
             x: 363
             y: 411
-            color: "#808080"
+            color: "black"
             text: qsTr("KPA")
             font.pixelSize: 22
         }
@@ -165,7 +165,7 @@ Item{
             id: text8
             x: 264
             y: 382
-            color: "#808080"
+            color: "black"
             text: qsTr("568")
             font.pixelSize: 51
         }
@@ -198,12 +198,12 @@ Item{
             style: GaugeStyle {
                 background: Rectangle {
 
-                    border.color: "#808080"
+                    border.color: "black"
                     border.width: 5
                 }
                 valueBar: Rectangle {
                     implicitWidth: 15
-                    color:"#808080"
+                    color:"black"
 
                 }
 
@@ -215,7 +215,7 @@ Item{
 
                     Rectangle {
 
-                        color: "#808080"
+                        color: "black"
                         anchors.fill: parent
 
                     }
@@ -225,13 +225,13 @@ Item{
                     implicitHeight: 3
 
                     Rectangle {
-                        color: "#808080"
+                        color: "black"
                         anchors.fill: parent
 
                     }
                 }
                 tickmarkLabel: Text {
-                    color: "#808080"
+                    color: "black"
                     visible: styleData.value === 0 || styleData.value === 32
                     font.pixelSize: 20
                     text: styleData.value === 0 ? "0" : (styleData.value === 32 ? "32" : "")
@@ -246,12 +246,12 @@ Item{
                 text: "Battery"
                 font.family: "Helvetica"
                 font.pointSize: 16
-                color: "#808080"}
+                color: "black"}
 
             Text {
                 x: 183
                 y: -6
-                color: "#808080"
+                color: "black"
                 text: "VOLTS"
                 font.family: "Helvetica"
                 font.pointSize: 16
@@ -262,7 +262,7 @@ Item{
                 y: 21
                 width: 71
                 height: 25
-                color: "#808080"
+                color: "black"
                 text: battery_gauge.value
                 horizontalAlignment: Text.AlignHCenter
                 font.pointSize: 16
@@ -280,23 +280,23 @@ Item{
             anchors.bottomMargin: 331
             style: GaugeStyle {
                 valueBar: Rectangle {
-                    color: "#808080"
+                    color: "black"
                     implicitWidth: 15
                 }
                 tickmarkLabel: Text {
-                    color: "#808080"
+                    color: "black"
                     text: styleData.value === -60 ? "-60" : (styleData.value === 20 ? "20" : "")
                     visible: styleData.value === -60 || styleData.value === 20
                     anchors.verticalCenter: parent.bottom
                     font.pixelSize: 20
                 }
                 background: Rectangle {
-                    border.color: "#808080"
+                    border.color: "black"
                     border.width: 5
                 }
                 minorTickmark: Item {
                     Rectangle {
-                        color: "#808080"
+                        color: "black"
                         anchors.fill: parent
                     }
                     implicitHeight: 3
@@ -304,7 +304,7 @@ Item{
                 }
                 tickmark: Item {
                     Rectangle {
-                        color: "#808080"
+                        color: "black"
                         anchors.fill: parent
                     }
                     implicitHeight: 3
@@ -326,7 +326,7 @@ Item{
             Text {
                 x: 45
                 y: -28
-                color: "#808080"
+                color: "black"
                 text: "Crankcase"
                 font.pointSize: 16
                 font.family: "Helvetica"
@@ -335,7 +335,7 @@ Item{
             Text {
                 x: 202
                 y: -4
-                color: "#808080"
+                color: "black"
                 text: "KPA"
                 font.pointSize: 16
                 font.family: "Helvetica"
@@ -346,7 +346,7 @@ Item{
                 y: 20
                 width: 46
                 height: 25
-                color: "#808080"
+                color: "black"
                 text:crankcase_gauge.value
                 horizontalAlignment: Text.AlignHCenter
                 font.pointSize: 16
@@ -377,7 +377,7 @@ Item{
                                ctx.reset();
 
                                ctx.beginPath();
-                               ctx.strokeStyle = "#808080";
+                               ctx.strokeStyle = "black";
                                ctx.lineWidth = outerRadius * 0.05;
 
                                ctx.arc(outerRadius, outerRadius, outerRadius - ctx.lineWidth / 2,
@@ -394,14 +394,14 @@ Item{
                  implicitWidth: outerRadius * 0.03
                  implicitHeight: outerRadius * 0.9
                  antialiasing: true
-                 color:  "#808080"
+                 color:  "black"
              }
              tickmark: Rectangle {
                  visible: styleData.value === -2 ||styleData.value === 24||styleData.value === 50 ||styleData.value === 76 ||styleData.value === 103
                  implicitWidth: outerRadius * 0.03
                  antialiasing: true
                  implicitHeight: outerRadius * 0.1
-                 color:  "#808080"
+                 color:  "black"
              }
 
              tickmarkStepSize : 1
@@ -410,12 +410,12 @@ Item{
                  implicitWidth: outerRadius * 0.01
                  antialiasing: true
                  implicitHeight: outerRadius * 0.03
-                 color: "#808080"
+                 color: "black"
              }
              tickmarkLabel:  Text {
                  font.pixelSize: 28
                  text: styleData.value
-                 color: "#808080"
+                 color: "black"
                  antialiasing: true
              }
              minimumValueAngle: -120
@@ -431,7 +431,7 @@ Item{
 
         Text {
 
-            color: "#808080"
+            color: "black"
             text: "XMSN TEMP"
             font.pointSize: 28
             anchors.bottom: parent.verticalCenter
@@ -439,7 +439,7 @@ Item{
             anchors.horizontalCenter: parent.horizontalCenter
         }
         Text {
-            color: "#808080"
+            color: "black"
             text: "DEG C"
             font.pointSize: 28
             anchors.top: parent.verticalCenter
@@ -451,7 +451,7 @@ Item{
 
             width: 149
             height: 79
-            color: "#808080"
+            color: "black"
             text: xmsn_temp_gauge.value
             horizontalAlignment: Text.AlignHCenter
             anchors.horizontalCenterOffset: 6
@@ -486,7 +486,7 @@ Item{
                                ctx.reset();
 
                                ctx.beginPath();
-                               ctx.strokeStyle = "#808080";
+                               ctx.strokeStyle = "black";
                                ctx.lineWidth = outerRadius * 0.05;
 
                                ctx.arc(outerRadius, outerRadius, outerRadius - ctx.lineWidth / 2,
@@ -503,14 +503,14 @@ Item{
                  implicitWidth: outerRadius * 0.03
                  implicitHeight: outerRadius * 0.9
                  antialiasing: true
-                 color:  "#808080"
+                 color:  "black"
              }
              tickmark: Rectangle {
                  visible: styleData.value === 438 ||styleData.value === 1094||styleData.value === 1750 ||styleData.value === 2406 ||styleData.value === 3062
                  implicitWidth: outerRadius * 0.03
                  antialiasing: true
                  implicitHeight: outerRadius * 0.1
-                 color:  "#808080"
+                 color:  "black"
              }
 
              tickmarkStepSize : 1
@@ -519,12 +519,12 @@ Item{
                  implicitWidth: outerRadius * 0.01
                  antialiasing: true
                  implicitHeight: outerRadius * 0.03
-                 color: "#808080"
+                 color: "black"
              }
              tickmarkLabel:  Text {
                  font.pixelSize: 28
                  text: styleData.value
-                 color: "#808080"
+                 color: "black"
                  antialiasing: true
              }
              minimumValueAngle: -120
@@ -540,7 +540,7 @@ Item{
 
         Text {
 
-            color: "#808080"
+            color: "black"
             text: "XMSN Pres"
             font.pointSize: 28
             anchors.bottom: parent.verticalCenter
@@ -548,7 +548,7 @@ Item{
             anchors.horizontalCenter: parent.horizontalCenter
         }
         Text {
-            color: "#808080"
+            color: "black"
             text: "KPA"
             font.pointSize: 28
             anchors.top: parent.verticalCenter
@@ -560,7 +560,7 @@ Item{
 
             width: 189
             height: 79
-            color: "#808080"
+            color: "black"
             text: xmsn_pres_gauge.value
             horizontalAlignment: Text.AlignHCenter
             anchors.horizontalCenterOffset: 6

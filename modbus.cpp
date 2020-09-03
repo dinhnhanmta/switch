@@ -50,16 +50,20 @@ Modbus::Modbus() {
    errSPNCode=0;
    player = new QMediaPlayer();
 
+
    file = 0;
    speed = 1.0;
-   volume = 0;
+   volume = 50;
+
+   valueQml[33] = 10;
+   valueQml[32] =50;
    emit varChanged();
    emit errChanged();
 }
 
 void Modbus::startConnection() {
-    QString str = "192.168.91.109:502";
-//    QString str = "localhost:502";
+//    QString str = "192.168.91.109:502";
+    QString str = "localhost:502";
     const QUrl url = QUrl::fromUserInput(str);
     // modbusDevice->disconnect();
     //delete modbusDevice;
@@ -92,7 +96,7 @@ void Modbus::setUserName(const QString &userName)
 }
 void Modbus::updateData(QModbusDataUnit::RegisterType table, int address, int size)
 {
-    quint16 valueQml[100];
+
     for (int i = 0; i < size; ++i) {
         quint16 value;
         QString text;
@@ -183,16 +187,19 @@ void Modbus::updateData(QModbusDataUnit::RegisterType table, int address, int si
                 player -> stop();
                 break;
             case 1:
+                qDebug()<<"play 1";
                 player->stop();
                 player->setMedia(QUrl::fromLocalFile("/home/pi/database/a.mp3"));
                 player->play();
                 break;
             case 2:
+                 qDebug()<<"play 2";
                 player->stop();
                 player->setMedia(QUrl::fromLocalFile("/home/pi/database/b.mp3"));
                 player->play();
-                break;
+                break;qDebug()<<"play 1";
             case 3:
+            qDebug()<<"play 3";
                 player->stop();
                 player->setMedia(QUrl::fromLocalFile("/home/pi/database/c.mp3"));
                 player->play();

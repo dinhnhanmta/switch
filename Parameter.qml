@@ -8,30 +8,30 @@ import QtQuick.Extras 1.4
 Item{
 
     x: 120
-    y: 70
+    y: 40
     width: 1000
     height: 600
-    scale: 1.25
+    scale: 1
 
     Text {
-        x: 32
-        y: 8
+        x: 70
+        y: 0
         text: "ENGINE SPEED"
         fontSizeMode: Text.HorizontalFit
         scale: 1
         font.family: "Times New Roman"
         font.pointSize: 28
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         Text {
-            x: -97
-            y: 23
+            x: -76
+            y: 41
             width: 378
             height: 120
             text: Modbus.q_engineSpeed
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
             font.pointSize: 90
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
         }
         Text {
             x: 295
@@ -39,7 +39,7 @@ Item{
             text: "RPM"
             font.family: "Tahoma"
             font.pointSize: 28
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
         }
 
     }
@@ -47,7 +47,7 @@ Item{
     Text {
         x: 8
         y: 181
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         text: "Left Air Inlet"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -56,7 +56,7 @@ Item{
             y: 30
             width: 139
             height: 56
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_leftAirInlet
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
@@ -66,7 +66,7 @@ Item{
         Text {
             x: 169
             y: 44
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: "KPA"
             font.family: "Tahoma"
             font.pointSize: 17
@@ -76,7 +76,7 @@ Item{
     Text {
         x: 331
         y: 181
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         text: "L Turbo Inlet"
         font.pointSize: 19
         font.family: "Helvetica"
@@ -85,7 +85,7 @@ Item{
             y: 33
             width: 160
             height: 56
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_lTurboInlet
             horizontalAlignment: Text.AlignRight
             font.pointSize: 35
@@ -95,7 +95,7 @@ Item{
         Text {
             x: 162
             y: 49
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: "KPA"
             font.pointSize: 17
             font.family: "Tahoma"
@@ -105,7 +105,7 @@ Item{
     Text {
         x: 336
         y: 290
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         text: "R Turbo Inlet"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -114,7 +114,7 @@ Item{
             y: 34
             width: 156
             height: 56
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_rTurboInlet
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
@@ -124,7 +124,7 @@ Item{
         Text {
             x: 160
             y: 48
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: "KPA"
             font.family: "Tahoma"
             font.pointSize: 17
@@ -134,7 +134,7 @@ Item{
     Text {
         x: 336
         y: 396
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         text: "Fuel Driff Inlet"
         font.pointSize: 19
         font.family: "Helvetica"
@@ -143,7 +143,7 @@ Item{
             y: 30
             width: 153
             height: 56
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_fuelDriffInlet
             horizontalAlignment: Text.AlignRight
             font.pointSize: 35
@@ -153,7 +153,7 @@ Item{
         Text {
             x: 161
             y: 44
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: "KPA"
             font.pointSize: 17
             font.family: "Tahoma"
@@ -163,7 +163,7 @@ Item{
     Text {
         x: 591
         y: 181
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         text: "Exh Temp L"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -172,7 +172,7 @@ Item{
             y: 30
             width: 111
             height: 56
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_exhTempL
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
@@ -182,7 +182,7 @@ Item{
         Text {
             x: 130
             y: 44
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: "DEG C"
             font.family: "Tahoma"
             font.pointSize: 17
@@ -192,7 +192,7 @@ Item{
     Text {
         x: 591
         y: 290
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         text: "Exh Temp R"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -201,7 +201,7 @@ Item{
             y: 30
             width: 111
             height: 56
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_exhTempR
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
@@ -211,7 +211,7 @@ Item{
         Text {
             x: 129
             y: 50
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: "DEG C"
             font.family: "Tahoma"
             font.pointSize: 17
@@ -221,7 +221,7 @@ Item{
     Text {
         x: 597
         y: 396
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         text: "Oil Driff Inlet"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -230,7 +230,7 @@ Item{
             y: 30
             width: 111
             height: 56
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_oilDriffInlet
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
@@ -240,7 +240,7 @@ Item{
         Text {
             x: 131
             y: 42
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: "KPA"
             font.family: "Tahoma"
             font.pointSize: 17

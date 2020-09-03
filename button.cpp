@@ -1,5 +1,6 @@
 #include "button.hpp"
 #include "wiringPi.h"
+#include <QDebug>
 
 button::button(QObject* parent) : QObject(parent)
 {
@@ -48,6 +49,7 @@ void button::readValue()
 
    if (trigger_decrease==true)
    {
+       qDebug()<< "button decreas press";
        if (digitalRead(pin_decrease)==1) {if (counter>1) counter--; trigger_decrease=false;emit varChanged();}
    }
 
@@ -65,7 +67,9 @@ void button::readValue()
    }
    if (trigger_ring==true)
    {
-       if (digitalRead(pin_ring)==1) {trigger_ring=false; pModbus->errVisible=false; emit pModbus->errChanged();}
+       if (digitalRead(pin_ring)==1) {
+           qDebug()<< "button ring press";
+           trigger_ring=false; pModbus->errVisible=!pModbus->errVisible; emit pModbus->errChanged();}
    }
 
 }

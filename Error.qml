@@ -9,7 +9,7 @@ Item {
     y: 70
     width: 800
     height: 480
-    scale: 1.25
+    scale: 1
 Rectangle
 {
     width: 640
@@ -25,13 +25,13 @@ Rectangle
         scale: 1
         font.family: "Times New Roman"
         font.pointSize: 24
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
     }
 
     Text {
         x: 77
         y: 55
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         text: "SOURCE:"
         fontSizeMode: Text.HorizontalFit
         font.pointSize: 24
@@ -41,7 +41,7 @@ Rectangle
         Text {
             x: 148
             y: 0
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_errSource
             fontSizeMode: Text.HorizontalFit
             font.pointSize: 24
@@ -51,7 +51,7 @@ Rectangle
         Text {
             x: 37
             y: 37
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_errSource===0? "PORT":"STARPOARD"
             fontSizeMode: Text.HorizontalFit
             font.pointSize: 24
@@ -63,13 +63,13 @@ Rectangle
     Text {
         x: 77
         y: 130
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         text: "SPN: "
         fontSizeMode: Text.HorizontalFit
         Text {
             x: 148
             y: 0
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_errSPNCode
             fontSizeMode: Text.HorizontalFit
             font.pointSize: 24
@@ -83,7 +83,7 @@ Rectangle
             y: 34
             width: 521
             height: 79
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_errSPN
             //fontSizeMode: Text.HorizontalFit
             font.pointSize: 24
@@ -99,13 +99,13 @@ Rectangle
     Text {
         x: 77
         y: 242
-        color: button.night_mode===true? "white":"#808080"
+        color: button.night_mode===true? "white":"black"
         text: "FMI:"
         fontSizeMode: Text.HorizontalFit
         Text {
             x: 148
             y: 0
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_errFMICode
             fontSizeMode: Text.HorizontalFit
             font.pointSize: 24
@@ -118,7 +118,7 @@ Rectangle
             y: 36
             width: 523
             height: 88
-            color: button.night_mode===true? "white":"#808080"
+            color: button.night_mode===true? "white":"black"
             text: Modbus.q_errFMI
             //fontSizeMode: Text.HorizontalFit
             font.pointSize: 24

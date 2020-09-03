@@ -21,7 +21,7 @@ GST_VERSION=1.0
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    Modbus.cpp \
+    #Modbus.cpp \
     button.cpp \
     database.cpp \
     main.cpp \
@@ -45,9 +45,9 @@ HEADERS += \
     Modbus.hpp \
     button.hpp \
 INCLUDEPATH    += /usr/local/include \
-    database.h +/usr/lib/arm-linux-gnueabiht/gstreamer-1.0
+    database.h +/usr/lib/arm-linux-gnueabihf/gstreamer-1.0
 LIBS += -L/usr/local/lib -lwiringPi
-LIBS += -L/usr/lib/arm-linux-gnueabiht/gstreamer-1.0
+LIBS += -L/usr/lib/arm-linux-gnueabihf/gstreamer-1.0
 QT_DEBUG_PLUGINS=1
 #INCLUDEPATH += $$PWD/WiringPi-Qt
 #include(WiringPi-Qt/WiringPi-Qt.pri)

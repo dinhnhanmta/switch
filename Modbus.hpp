@@ -68,6 +68,7 @@ public:
 public:
    QSqlDatabase db;
    QMediaPlayer * player;
+//   QMediaService *svc =player->service();
    void readDatabase();
    void startConnection();
 public slots:
@@ -188,7 +189,7 @@ private:
      int file;
      int volume;
      qreal speed;
-
+    quint16 valueQml[100];
 public:
      bool errVisible;
 
