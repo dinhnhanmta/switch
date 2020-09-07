@@ -62,7 +62,7 @@ Modbus::Modbus() {
 }
 
 void Modbus::startConnection() {
-//    QString str = "192.168.91.109:502";
+   //QString str = "192.168.0.10:1234";
     QString str = "localhost:502";
     const QUrl url = QUrl::fromUserInput(str);
     // modbusDevice->disconnect();
@@ -80,7 +80,7 @@ void Modbus::startConnection() {
     reg.insert(QModbusDataUnit::Coils, { QModbusDataUnit::Coils, 0, 10 });
     reg.insert(QModbusDataUnit::DiscreteInputs, { QModbusDataUnit::DiscreteInputs, 0, 10 });
     reg.insert(QModbusDataUnit::InputRegisters, { QModbusDataUnit::InputRegisters, 0, 10 });
-    reg.insert(QModbusDataUnit::HoldingRegisters, { QModbusDataUnit::HoldingRegisters, 0, 34 });
+    reg.insert(QModbusDataUnit::HoldingRegisters, { QModbusDataUnit::HoldingRegisters, 0, 44 });
     modbusDevice->setMap(reg);
     connect(modbusDevice, &QModbusServer::dataWritten,
             this, &Modbus::updateData);
@@ -106,8 +106,9 @@ void Modbus::updateData(QModbusDataUnit::RegisterType table, int address, int si
             break;
         case QModbusDataUnit::HoldingRegisters:
             modbusDevice->data(QModbusDataUnit::HoldingRegisters, address + i, &value);
-            qDebug() << value;
+
             valueQml[address + i]=value;
+            qDebug() << value<<" o "<<address + i;
             break;
         default:
             break;
@@ -147,6 +148,7 @@ void Modbus::updateData(QModbusDataUnit::RegisterType table, int address, int si
 
      if (valueQml[28]!=errSource || valueQml[29]!=errSPN || valueQml[30] != errFMI)
      {
+         qDebug() << "ERROR"<<valueQml[28]<<" 29:"<<valueQml[29]<<"  30:"<<valueQml[30];
         if (valueQml[28]==1 || valueQml [28] ==2)
         {
         errSource = valueQml[28];

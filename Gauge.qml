@@ -6,7 +6,7 @@ import QtQuick.Controls 1.1
 //import QtQuick.Enterprise.Controls 1.1
 
 Item{
-
+    property bool night_mode: false
     x: 110
     y: 70
     width: 1000
@@ -33,7 +33,7 @@ Item{
                            ctx.reset();
 
                            ctx.beginPath();
-                           ctx.strokeStyle = button.night_mode===true? "white":"black";
+                           ctx.strokeStyle = night_mode===true? "white":"black";
                            ctx.lineWidth = outerRadius * 0.05;
 
                            ctx.arc(outerRadius, outerRadius, outerRadius - ctx.lineWidth / 2,
@@ -50,26 +50,26 @@ Item{
             implicitWidth: outerRadius * 0.03
             implicitHeight: outerRadius * 0.9
             antialiasing: true
-            color:  button.night_mode===true? "white":"black"
+            color:  night_mode===true? "white":"black"
         }
         tickmark: Rectangle {
                         visible: styleData.value < 80 || styleData.value % 10 == 0
                         implicitWidth: outerRadius * 0.02
                         antialiasing: true
                         implicitHeight: outerRadius * 0.06
-                        color:  button.night_mode===true? "white":"black"
+                        color:  night_mode===true? "white":"black"
                     }
         minorTickmark: Rectangle {
                         visible: styleData.value < 0
                         implicitWidth: outerRadius * 0.01
                         antialiasing: true
                         implicitHeight: outerRadius * 0.03
-                        color: button.night_mode===true? "white":"black"
+                        color: night_mode===true? "white":"black"
                     }
         tickmarkLabel:  Text {
             font.pixelSize: 28
             text: styleData.value
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             antialiasing: true
         }
         minimumValueAngle: -135
@@ -85,7 +85,7 @@ Item{
 
     Text {
                 id: x100
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 text: "x100"
                 font.pointSize: 18
                 anchors.bottom: parent.verticalCenter
@@ -94,7 +94,7 @@ Item{
         }
     Text {
                 id: rpm
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 text: "RPM"
                 font.pointSize: 18
                 anchors.top: parent.verticalCenter
@@ -103,11 +103,13 @@ Item{
         }
     Text {
                 id: rpmValue
-                width: 151
+                width: 172
                 height: 79
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 text: engineSpeed3.value*100
+                font.bold: true
                 font.pointSize: 51
+                horizontalAlignment: Text.AlignHCenter
                 anchors.top: rpm.bottom
                 anchors.topMargin: 40
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -144,9 +146,14 @@ Item{
             }
 
             style: GaugeStyle {
+                background: Rectangle {
+
+                    border.color: night_mode===true? "white":"black"
+                    border.width: 5
+                }
                 valueBar: Rectangle {
                     implicitWidth: 15
-                    color:button.night_mode===true? "white":"black"
+                    color:night_mode===true? "white":"black"
                 }
                 tickmark: Item {
                      id: tick
@@ -155,7 +162,7 @@ Item{
 
                     Rectangle {
 
-                        color: button.night_mode===true? "white":"black"
+                        color: night_mode===true? "white":"black"
                         anchors.fill: parent
 
                     }
@@ -165,13 +172,13 @@ Item{
                     implicitHeight: 3
 
                     Rectangle {
-                        color: button.night_mode===true? "white":"black"
+                        color: night_mode===true? "white":"black"
                         anchors.fill: parent
 
                     }
                 }
                 tickmarkLabel: Text {
-                                           color: button.night_mode===true? "white":"black"
+                                           color: night_mode===true? "white":"black"
                                            visible: styleData.value === 0 || styleData.value === 32
                                            font.pixelSize: 20
                                            text: styleData.value === 0 ? "0" : (styleData.value === 32 ? "32" : "")
@@ -186,7 +193,7 @@ Item{
         id: text1
         x: 604
         y: 12
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         text: qsTr("Battery")
         font.pixelSize: 18
     }
@@ -195,63 +202,69 @@ Item{
         id: text2
         x: 743
         y: 52
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         text: qsTr("VOLTS")
         font.pixelSize: 18
     }
 
     Text {
         id: text3
-        x: 21
-        y: 361
-        color: button.night_mode===true? "white":"black"
+        x: 26
+        y: 364
+        color: night_mode===true? "white":"black"
         text: qsTr("Coolant Temp")
         font.family: "Times New Roman"
-        font.pixelSize: 18
+        font.pixelSize: 19
     }
 
     Text {
         id: text5
-        x: 127
-        y: 411
-        color: button.night_mode===true? "white":"black"
+        x: 175
+        y: 404
+        color: night_mode===true? "white":"black"
         text: qsTr("DEG C")
         font.pixelSize: 22
     }
 
     Text {
         id: text6
-        x: 65
+        x: 48
         y: 382
-        color: button.night_mode===true? "white":"black"
+        width: 121
+        height: 58
+        color: night_mode===true? "white":"black"
         text: Modbus.q_coolantTemp
+        font.bold: true
         font.pixelSize: 51
     }
 
         Text {
             id: text4
-            x: 206
-            y: 361
-            color: button.night_mode===true? "white":"black"
+            x: 313
+            y: 364
+            color: night_mode===true? "white":"black"
             text: qsTr("Oil Press")
-            font.pixelSize: 18
+            font.pixelSize: 19
         }
 
         Text {
             id: text7
-            x: 363
-            y: 411
-            color: button.night_mode===true? "white":"black"
+            x: 457
+            y: 404
+            color: night_mode===true? "white":"black"
             text: qsTr("KPA")
             font.pixelSize: 22
         }
 
         Text {
             id: text8
-            x: 264
+            x: 313
             y: 382
-            color: button.night_mode===true? "white":"black"
+            width: 147
+            height: 58
+            color: night_mode===true? "white":"black"
             text: Modbus.q_oilPress
+            font.bold: true
             font.pixelSize: 51
         }
 

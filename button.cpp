@@ -9,7 +9,7 @@ button::button(QObject* parent) : QObject(parent)
 button::button(int pin_increase_input,int pin_decrease_input,int pin_mode_input, int pin_ring_input, Modbus *p)
 {
    pModbus = p;
-   counter=3;
+   counter=1;
    now=0;
    mode=false;
    pin_increase=pin_increase_input;
@@ -40,7 +40,15 @@ void button::readValue()
    }
    if (trigger_increase==true)
    {
-       if (digitalRead(pin_increase)==1) {if (counter<7) counter++;trigger_increase=false;    emit varChanged();}
+       if (digitalRead(pin_increase)==1)
+       {
+           counter++;trigger_increase=false;
+           if (counter>7) counter =1;
+           emit varChanged();
+           emit varChanged2();
+
+
+       }
    }
 
    if (digitalRead(pin_decrease)==0) {
@@ -49,8 +57,17 @@ void button::readValue()
 
    if (trigger_decrease==true)
    {
-       qDebug()<< "button decreas press";
-       if (digitalRead(pin_decrease)==1) {if (counter>1) counter--; trigger_decrease=false;emit varChanged();}
+
+       if (digitalRead(pin_decrease)==1)
+       {
+           counter--;
+           if (counter == 0) counter =7;
+           trigger_decrease=false;
+
+           emit varChanged();
+           emit varChanged2();
+            qDebug()<< "button decreas press , varchanged";
+       }
    }
 
    if (digitalRead(pin_mode)==0) {

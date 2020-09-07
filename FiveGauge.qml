@@ -12,6 +12,7 @@ Item{
     width: 1024
     height: 600
     scale: 1
+    property bool night_mode: false
     Text {
         x: 247
         y: 8
@@ -20,17 +21,21 @@ Item{
         scale: 1
         font.family: "Times New Roman"
         font.pointSize: 28
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         Text {
             x: -41
             y: 17
             width: 320
             height: 129
             text:Modbus.q_engineSpeed
-            horizontalAlignment: Text.AlignRight
+            font.bold: true
+            horizontalAlignment: Text.AlignHCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: parent.bottom
+            anchors.topMargin: 10
             font.family: "Tahoma"
             font.pointSize: 90
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
         }
         Text {
             x: 281
@@ -38,36 +43,37 @@ Item{
             text: "RPM"
             font.family: "Tahoma"
             font.pointSize: 28
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
         }
 
     }
 
     Text {
-        x: 297
+        x: 319
         y: 394
         text: "Battery"
         font.family: "Helvetica"
         font.pointSize: 19
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         Text {
-            x: -23
+            x: -139
             y: 30
             width: 186
             height: 56
             text: Modbus.q_battery/100
+            font.bold: true
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
             font.pointSize: 35
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
         }
         Text {
-            x: 169
+            x: 59
             y: 44
             text: "VOLTS"
             font.family: "Tahoma"
             font.pointSize: 17
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
         }
 
     }
@@ -93,7 +99,7 @@ Item{
                            ctx.reset();
 
                            ctx.beginPath();
-                           ctx.strokeStyle = button.night_mode===true? "white":"black";
+                           ctx.strokeStyle = night_mode===true? "white":"black";
                            ctx.lineWidth = outerRadius * 0.05;
 
                            ctx.arc(outerRadius, outerRadius, outerRadius - ctx.lineWidth / 2,
@@ -110,14 +116,14 @@ Item{
             implicitWidth: outerRadius * 0.03
             implicitHeight: outerRadius * 0.9
             antialiasing: true
-            color:  button.night_mode===true? "white":"black"
+            color:  night_mode===true? "white":"black"
         }
         tickmark: Rectangle {
                         visible: styleData.value === 613||  styleData.value === 350||  styleData.value === 88||  styleData.value === 219|| styleData.value === 481
                         implicitWidth: outerRadius * 0.03
                         antialiasing: true
                         implicitHeight: outerRadius * 0.1
-                        color:  button.night_mode===true? "white":"black"
+                        color:  night_mode===true? "white":"black"
                     }
 
         tickmarkStepSize : 1
@@ -126,12 +132,12 @@ Item{
                         implicitWidth: outerRadius * 0.01
                         antialiasing: true
                         implicitHeight: outerRadius * 0.03
-                        color: button.night_mode===true? "white":"black"
+                        color: night_mode===true? "white":"black"
                     }
         tickmarkLabel:  Text {
             font.pixelSize: 28
             text: styleData.value
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             antialiasing: true
         }
         minimumValueAngle: -120
@@ -146,7 +152,7 @@ Item{
 
     Text {
 
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 text: "OIL PRESS"
                 font.pointSize: 28
                 anchors.bottom: parent.verticalCenter
@@ -154,7 +160,7 @@ Item{
                 anchors.horizontalCenter: parent.horizontalCenter
         }
     Text {
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 text: "KPA"
                 font.pointSize: 28
                 anchors.top: parent.verticalCenter
@@ -162,17 +168,18 @@ Item{
                 anchors.horizontalCenter: parent.horizontalCenter
         }
     Text {
-        y: 284
-
-                width: 151
-                height: 79
-                color: button.night_mode===true? "white":"black"
+        y: 309
+                z: 1
+                width: 298
+                height: 93
+                color: night_mode===true? "white":"black"
                 text: oilpress_gauge.value
-                anchors.horizontalCenterOffset: 6
+                font.bold: true
+                anchors.horizontalCenterOffset: 5
                 font.pointSize: 61
-                anchors.top: rpm.bottom
                 anchors.topMargin: 40
                 anchors.horizontalCenter: parent.horizontalCenter
+                horizontalAlignment: Text.AlignHCenter
         }
 
 
@@ -195,15 +202,16 @@ Item{
                    }
          background: Canvas {
                        onPaint: {
+
                            var ctx = getContext("2d");
                            ctx.reset();
 
                            ctx.beginPath();
-                           ctx.strokeStyle = button.night_mode===true? "white":"black";
+                           ctx.strokeStyle = night_mode===true? "white":"black";
                            ctx.lineWidth = outerRadius * 0.05;
 
                            ctx.arc(outerRadius, outerRadius, outerRadius - ctx.lineWidth / 2,
-                               degreesToRadians(valueToAngle(20) - 90), degreesToRadians(valueToAngle(120) - 90));
+                               degreesToRadians(valueToAngle(-20) - 90), degreesToRadians(valueToAngle(120) - 90));
                            ctx.moveTo(outerRadius,outerRadius);
                            ctx.lineTo(outerRadius-Math.sqrt(3)/2*outerRadius,1/2*outerRadius+outerRadius);
                             ctx.moveTo(outerRadius,outerRadius);
@@ -216,14 +224,14 @@ Item{
             implicitWidth: outerRadius * 0.03
             implicitHeight: outerRadius * 0.9
             antialiasing: true
-            color:  button.night_mode===true? "white":"black"
+            color:  night_mode===true? "white":"black"
         }
         tickmark: Rectangle {
                         visible: styleData.value === 33 ||styleData.value === 52 ||styleData.value === 70 ||styleData.value === 108 ||styleData.value === 89
                         implicitWidth: outerRadius * 0.03
                         antialiasing: true
                         implicitHeight: outerRadius * 0.1
-                        color:  button.night_mode===true? "white":"black"
+                        color:  night_mode===true? "white":"black"
                     }
 
         tickmarkStepSize : 1
@@ -232,28 +240,28 @@ Item{
                         implicitWidth: outerRadius * 0.01
                         antialiasing: true
                         implicitHeight: outerRadius * 0.03
-                        color: button.night_mode===true? "white":"black"
+                        color: night_mode===true? "white":"black"
                     }
         tickmarkLabel:  Text {
             font.pixelSize: 28
             text: styleData.value
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             antialiasing: true
         }
         minimumValueAngle: -120
         maximumValueAngle: 120
 
         labelInset: -30
-        labelStepSize : 50
+        labelStepSize : 70
 
     }
     maximumValue: 120
-    minimumValue: 20
+    minimumValue: -20
     stepSize: 1
 
     Text {
 
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 text: "COOLANT"
                 font.pointSize: 28
                 anchors.bottom: parent.verticalCenter
@@ -261,23 +269,25 @@ Item{
                 anchors.horizontalCenter: parent.horizontalCenter
         }
     Text {
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 text: "DEG C"
+                anchors.horizontalCenterOffset: 0
                 font.pointSize: 28
                 anchors.top: parent.verticalCenter
-                anchors.topMargin: 40
+                anchors.topMargin: 50
                 anchors.horizontalCenter: parent.horizontalCenter
         }
     Text {
-        y: 284
-
-                width: 89
-                height: 79
-                color: button.night_mode===true? "white":"black"
+        y: 304
+                z:1
+                width: 235
+                height: 92
+                color: night_mode===true? "white":"black"
                 text: coolant_gauge.value
-                anchors.horizontalCenterOffset: 6
+                anchors.horizontalCenterOffset: 1
+                font.bold: true
+                horizontalAlignment: Text.AlignHCenter
                 font.pointSize: 61
-                anchors.top: rpm.bottom
                 anchors.topMargin: 40
                 anchors.horizontalCenter: parent.horizontalCenter
         }
@@ -291,7 +301,7 @@ Item{
         scale: 1
         width: 100
         rotation: 0
-        anchors.rightMargin: 316
+        anchors.rightMargin: 434
         anchors.bottomMargin: 246
         anchors.leftMargin: 296
         anchors.topMargin: 187
@@ -314,12 +324,12 @@ Item{
         style: GaugeStyle {
             background: Rectangle {
 
-                border.color: button.night_mode===true? "white":"black"
+                border.color: night_mode===true? "white":"black"
                 border.width: 5
             }
             valueBar: Rectangle {
                 implicitWidth: 15
-                color:button.night_mode===true? "white":"black"
+                color:night_mode===true? "white":"black"
 
             }
 
@@ -331,7 +341,7 @@ Item{
 
                 Rectangle {
 
-                    color: button.night_mode===true? "white":"black"
+                    color: night_mode===true? "white":"black"
                     anchors.fill: parent
 
                 }
@@ -341,13 +351,13 @@ Item{
                 implicitHeight: 3
 
                 Rectangle {
-                    color: button.night_mode===true? "white":"black"
+                    color: night_mode===true? "white":"black"
                     anchors.fill: parent
 
                 }
             }
             tickmarkLabel: Text {
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 visible: styleData.value === 0 || styleData.value === 350
                 font.pixelSize: 20
                 text: styleData.value === 0 ? "0" : (styleData.value === 350 ? "350" : "")
@@ -357,17 +367,19 @@ Item{
 
         }
         Text {
-            x: 43
+            anchors.horizontalCenter: parent.horizontalCenter
             y: -27
             text: "Boost Pres"
             font.family: "Helvetica"
             font.pointSize: 16
-            color: button.night_mode===true? "white":"black"}
+            color: night_mode===true? "white":"black"}
 
         Text {
-            x: 397
-            y: -10
-            color: button.night_mode===true? "white":"black"
+            x: 304
+            y: -5
+            width: 46
+            height: 15
+            color: night_mode===true? "white":"black"
             text: "KPA"
             font.family: "Helvetica"
             font.pointSize: 16
@@ -396,7 +408,7 @@ Item{
             tickmark: Item {
                 id: tick1
                 Rectangle {
-                    color: button.night_mode===true? "white":"black"
+                    color: night_mode===true? "white":"black"
                     anchors.fill: parent
                 }
                 implicitHeight: 3
@@ -404,53 +416,55 @@ Item{
             }
             minorTickmark: Item {
                 Rectangle {
-                    color: button.night_mode===true? "white":"black"
+                    color: night_mode===true? "white":"black"
                     anchors.fill: parent
                 }
                 implicitHeight: 3
                 implicitWidth: 5
             }
             tickmarkLabel: Text {
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 text: styleData.value === 0 ? "0" : (styleData.value === 100 ? "100" : "")
                 anchors.verticalCenter: parent.bottom
                 visible: styleData.value === 0 || styleData.value === 100
                 font.pixelSize: 20
             }
             background: Rectangle {
-                border.color: button.night_mode===true? "white":"black"
+                border.color: night_mode===true? "white":"black"
                 border.width: 5
             }
             valueBar: Rectangle {
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 implicitWidth: 15
             }
         }
         maximumValue: 100
         Text {
-            x: 43
+            anchors.horizontalCenter: parent.horizontalCenter
             y: -27
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             text: "Engine Load"
             font.family: "Helvetica"
             font.pointSize: 16
         }
 
         Text {
-            x: 396
-            y: -6
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             text: "%"
+            anchors.verticalCenterOffset: -71
             font.family: "Helvetica"
             font.pointSize: 16
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.right
+            anchors.leftMargin: 10
         }
-        anchors.rightMargin: 316
+        anchors.rightMargin: 434
         scale: 1
     }
 
     Gauge {
         id: gauge2
-        x: 7
+        anchors.horizontalCenter: parent.horizontalCenter
         y: 8
         width: 100
         height: 100
@@ -469,7 +483,7 @@ Item{
             tickmark: Item {
                 id: tick2
                 Rectangle {
-                    color: button.night_mode===true? "white":"black"
+                    color: night_mode===true? "white":"black"
                     anchors.fill: parent
                 }
                 implicitHeight: 3
@@ -477,47 +491,50 @@ Item{
             }
             minorTickmark: Item {
                 Rectangle {
-                    color: button.night_mode===true? "white":"black"
+                    color: night_mode===true? "white":"black"
                     anchors.fill: parent
                 }
                 implicitHeight: 3
                 implicitWidth: 5
             }
             tickmarkLabel: Text {
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 text: styleData.value === 0 ? "0" : (styleData.value === 200 ? "200" : "")
                 anchors.verticalCenter: parent.bottom
                 visible: styleData.value === 0 || styleData.value === 200
                 font.pixelSize: 20
             }
             background: Rectangle {
-                border.color: button.night_mode===true? "white":"black"
+                border.color: night_mode===true? "white":"black"
                 border.width: 5
             }
             valueBar: Rectangle {
-                color: button.night_mode===true? "white":"black"
+                color: night_mode===true? "white":"black"
                 implicitWidth: 15
             }
         }
         maximumValue: 200
         Text {
-            x: 43
+            anchors.horizontalCenter: parent.horizontalCenter
             y: -27
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             text: "Fuel Rate"
             font.family: "Helvetica"
             font.pointSize: 16
         }
 
         Text {
-            x: 400
-            y: -6
-            color: button.night_mode===true? "white":"black"
+
+            color: night_mode===true? "white":"black"
             text: "LPH"
+            anchors.verticalCenterOffset: -71
             font.family: "Helvetica"
             font.pointSize: 16
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.right
+            anchors.leftMargin: 10
         }
-        anchors.rightMargin: 316
+        anchors.rightMargin: 434
         scale: 1
     }
 }

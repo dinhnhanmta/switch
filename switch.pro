@@ -1,4 +1,4 @@
-QT += quick serialbus serialport sql multimedia
+QT += quick serialbus serialport sql multimedia gui
 CONFIG += c++11
 
 # The following define makes your compiler emit warnings if you use

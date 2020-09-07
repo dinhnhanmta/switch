@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
     Modbus *m;
     m = new Modbus();
     engine.rootContext()->setContextProperty("Modbus", m);
+    qmlRegisterType<button>("Button", 1, 0, "Button");
     m->startConnection();
     button buttonvar(INCREASE_BUTTON,DECREASE_BUTTON,MODE_BUTTON,RING_BUTTON,m);
     context->setContextProperty("button", &buttonvar);

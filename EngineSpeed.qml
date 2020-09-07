@@ -7,39 +7,41 @@ import QtQuick.Extras 1.4
 
 Item{
     property var name: 33
-
+    property bool night_mode: false
     x: 110
     y: 40
     width: 1000
     height: 600
     scale: 1
     Text {
-        x: 32
         y: 8
         text: "ENGINE SPEED"
+        anchors.horizontalCenterOffset: -128
         fontSizeMode: Text.HorizontalFit
         scale: 1
+        anchors.horizontalCenter: parent.horizontalCenter
         font.family: "Times New Roman"
         font.pointSize: 28
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         Text {
             x: -97
-            y: 23
+            y: 38
             width: 378
             height: 120
             text: Modbus.q_engineSpeed
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
             font.pointSize: 90
-            color: button.night_mode===true? "white":"black"
+            font.bold: true
+            color: night_mode===true? "white":"black"
         }
         Text {
-            x: 295
-            y: 94
+            x: 292
+            y: 101
             text: "RPM"
             font.family: "Tahoma"
             font.pointSize: 28
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
         }
 
     }
@@ -47,7 +49,7 @@ Item{
     Text {
         x: 623
         y: 396
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         text: "Engine Hours"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -56,9 +58,10 @@ Item{
             y: 30
             width: 155
             height: 56
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             text: Modbus.q_engineHours
             horizontalAlignment: Text.AlignRight
+            font.bold: true
             font.family: "Tahoma"
             font.pointSize: 35
         }
@@ -67,7 +70,7 @@ Item{
     Text {
         x: 45
         y: 181
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         text: "Oil Pres"
         font.pointSize: 19
         font.family: "Helvetica"
@@ -76,17 +79,18 @@ Item{
             y: 33
             width: 160
             height: 56
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             text: Modbus.q_oilPress
+            font.bold: true
             horizontalAlignment: Text.AlignRight
-            font.pointSize: 35
+            font.pointSize: 45
             font.family: "Tahoma"
         }
 
         Text {
             x: 162
-            y: 49
-            color: button.night_mode===true? "white":"black"
+            y: 55
+            color: night_mode===true? "white":"black"
             text: "KPA"
             font.pointSize: 17
             font.family: "Tahoma"
@@ -96,7 +100,7 @@ Item{
     Text {
         x: 50
         y: 290
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         text: "Boost Pres"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -105,17 +109,18 @@ Item{
             y: 34
             width: 156
             height: 56
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             text: Modbus.q_boostPres
+            font.bold: true
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
-            font.pointSize: 35
+            font.pointSize: 45
         }
 
         Text {
-            x: 160
-            y: 48
-            color: button.night_mode===true? "white":"black"
+            x: 158
+            y: 68
+            color: night_mode===true? "white":"black"
             text: "KPA"
             font.family: "Tahoma"
             font.pointSize: 17
@@ -125,7 +130,7 @@ Item{
     Text {
         x: 50
         y: 396
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         text: "Fuel Rate"
         font.pointSize: 19
         font.family: "Helvetica"
@@ -134,17 +139,18 @@ Item{
             y: 30
             width: 153
             height: 56
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             text: Modbus.q_fuelRate
+            font.bold: true
             horizontalAlignment: Text.AlignRight
-            font.pointSize: 35
+            font.pointSize: 45
             font.family: "Tahoma"
         }
 
         Text {
-            x: 161
-            y: 44
-            color: button.night_mode===true? "white":"black"
+            x: 158
+            y: 62
+            color: night_mode===true? "white":"black"
             text: "LPH"
             font.pointSize: 17
             font.family: "Tahoma"
@@ -154,7 +160,7 @@ Item{
     Text {
         x: 326
         y: 181
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         text: "Coolant Temp"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -163,17 +169,18 @@ Item{
             y: 30
             width: 111
             height: 56
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             text: Modbus.q_coolantTemp
+            font.bold: true
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
-            font.pointSize: 35
+            font.pointSize: 45
         }
 
         Text {
-            x: 130
-            y: 44
-            color: button.night_mode===true? "white":"black"
+            x: 143
+            y: 58
+            color: night_mode===true? "white":"black"
             text: "DEG C"
             font.family: "Tahoma"
             font.pointSize: 17
@@ -183,7 +190,7 @@ Item{
     Text {
         x: 326
         y: 290
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         text: "Fuel Pres"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -192,17 +199,18 @@ Item{
             y: 30
             width: 111
             height: 56
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             text: Modbus.q_fuelPres
+            font.bold: true
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
-            font.pointSize: 35
+            font.pointSize: 45
         }
 
         Text {
-            x: 129
-            y: 50
-            color: button.night_mode===true? "white":"black"
+            x: 144
+            y: 62
+            color: night_mode===true? "white":"black"
             text: "KPA"
             font.family: "Tahoma"
             font.pointSize: 17
@@ -212,7 +220,7 @@ Item{
     Text {
         x: 332
         y: 396
-        color: button.night_mode===true? "white":"black"
+        color: night_mode===true? "white":"black"
         text: "Battery"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -221,17 +229,18 @@ Item{
             y: 30
             width: 111
             height: 56
-            color: button.night_mode===true? "white":"black"
+            color: night_mode===true? "white":"black"
             text: Modbus.q_battery
+            font.bold: true
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"
-            font.pointSize: 35
+            font.pointSize: 45
         }
 
         Text {
-            x: 126
-            y: 44
-            color: button.night_mode===true? "white":"black"
+            x: 139
+            y: 61
+            color: night_mode===true? "white":"black"
             text: "VOLTS"
             font.family: "Tahoma"
             font.pointSize: 17
