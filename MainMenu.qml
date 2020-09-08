@@ -115,7 +115,7 @@ Item{
             x: 358
             y: 0
             color: night_mode===true? "white":"black"
-            text: "Bridge"
+            text: Modbus.q_unitLocation ? "Engine Room":"Bridge"
             font.pointSize: 18
             font.family: "Tahoma"
         }
@@ -213,7 +213,7 @@ Item{
     height: 139
         x:655
         y:0
-        color: "white"
+        color: night_mode===true? "black":"white"
         border.color: night_mode===true? "white":"black"
     border.width: 3
 

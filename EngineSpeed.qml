@@ -230,7 +230,7 @@ Item{
             width: 111
             height: 56
             color: night_mode===true? "white":"black"
-            text: Modbus.q_battery
+            text: Modbus.q_battery/100
             font.bold: true
             horizontalAlignment: Text.AlignRight
             font.family: "Tahoma"

@@ -13,25 +13,25 @@ Window {
 
 
     CurrentEngineTotal {
-        visible: button.counter_qml === 1 && button.night_mode === false
+        visible: button.counter_qml === 6 && button.night_mode === false
     }
     EngineSpeed {
         visible: button.counter_qml === 2 && button.night_mode === false
     }
     FiveGauge {
-        visible: button.counter_qml === 3 && button.night_mode === false
+        visible: button.counter_qml === 1 && button.night_mode === false
     }
     FourGauge {
-        visible: button.counter_qml === 4 && button.night_mode === false
+        visible: button.counter_qml === 3 && button.night_mode === false
     }
     Gauge {
         visible: button.counter_qml === 5 && button.night_mode === false
     }
     MainMenu {
-        visible: button.counter_qml === 6 && button.night_mode === false
+        visible: button.counter_qml === 7 && button.night_mode === false
     }
     Parameter {
-        visible: button.counter_qml === 7 && button.night_mode === false
+        visible: button.counter_qml === 4 && button.night_mode === false
     }
     Error{
         x: 184
@@ -43,7 +43,7 @@ Window {
 
     CurrentEngineTotal {
         night_mode: true
-        visible: button.counter_qml === 1 && button.night_mode === true
+        visible: button.counter_qml === 6 && button.night_mode === true
     }
     EngineSpeed {
         night_mode: true
@@ -51,11 +51,11 @@ Window {
     }
     FiveGauge {
         night_mode: true
-        visible: button.counter_qml === 3 && button.night_mode === true
+        visible: button.counter_qml === 1 && button.night_mode === true
     }
     FourGauge {
         night_mode: true
-        visible: button.counter_qml === 4 && button.night_mode === true
+        visible: button.counter_qml === 3 && button.night_mode === true
     }
     Gauge {
         night_mode: true
@@ -63,11 +63,11 @@ Window {
     }
     MainMenu {
         night_mode: true
-        visible: button.counter_qml === 6 && button.night_mode === true
+        visible: button.counter_qml === 7 && button.night_mode === true
     }
     Parameter {
         night_mode: true
-        visible: button.counter_qml === 7 && button.night_mode === true
+        visible: button.counter_qml === 4 && button.night_mode === true
     }
     Error{
         night_mode: true

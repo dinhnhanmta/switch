@@ -60,6 +60,8 @@ class Modbus : public QObject {
     Q_PROPERTY( int q_errSPNCode READ getErrSPNCode  NOTIFY errChanged)
     Q_PROPERTY( int q_errFMICode READ getErrFMICode  NOTIFY errChanged)
 
+    Q_PROPERTY( bool q_unitLocation READ getUnitLocation NOTIFY varChanged)
+
 
 public:
   Modbus();
@@ -126,7 +128,7 @@ public:
      int getLifeTimeIdleFuel  () {return lifeTimeIdleFuel;}
      int getAvgLoadFactor2  () {return avgLoadFactor2;}
      int getAvgFuelConsumption2  () {return avgFuelConsumption2;}
-
+     bool getUnitLocation() {return unitLocation;}
      bool getErrVisible (){return errVisible;}
      int getErrSource () {
          /*if (errSource==0) return  "PORT";
@@ -184,7 +186,7 @@ private:
      int errSPNCode;
      int errFMICode;
 
-
+     int unitLocation = 0;
      //play mp3
      int file;
      int volume;

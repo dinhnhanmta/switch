@@ -57,6 +57,8 @@ Modbus::Modbus() {
 
    valueQml[33] = 10;
    valueQml[32] =50;
+
+   unitLocation = false;
    emit varChanged();
    emit errChanged();
 }
@@ -80,7 +82,7 @@ void Modbus::startConnection() {
     reg.insert(QModbusDataUnit::Coils, { QModbusDataUnit::Coils, 0, 10 });
     reg.insert(QModbusDataUnit::DiscreteInputs, { QModbusDataUnit::DiscreteInputs, 0, 10 });
     reg.insert(QModbusDataUnit::InputRegisters, { QModbusDataUnit::InputRegisters, 0, 10 });
-    reg.insert(QModbusDataUnit::HoldingRegisters, { QModbusDataUnit::HoldingRegisters, 0, 44 });
+    reg.insert(QModbusDataUnit::HoldingRegisters, { QModbusDataUnit::HoldingRegisters, 0, 50 });
     modbusDevice->setMap(reg);
     connect(modbusDevice, &QModbusServer::dataWritten,
             this, &Modbus::updateData);
@@ -146,11 +148,23 @@ void Modbus::updateData(QModbusDataUnit::RegisterType table, int address, int si
      avgLoadFactor2 = valueQml[26];
      avgFuelConsumption2 = valueQml[27];
 
+     if (valueQml[34] == 0) unitLocation = false;
+     if (valueQml[34] == 1) unitLocation = true;
+
      if (valueQml[28]!=errSource || valueQml[29]!=errSPN || valueQml[30] != errFMI)
      {
-         qDebug() << "ERROR"<<valueQml[28]<<" 29:"<<valueQml[29]<<"  30:"<<valueQml[30];
-        if (valueQml[28]==1 || valueQml [28] ==2)
+        if (valueQml[28]==1)
         {
+            errVisible = true;
+            emit errChanged();
+        }
+
+        if (valueQml[28]==0)
+        {
+            errVisible = false;
+            emit errChanged();
+        }
+
         errSource = valueQml[28];
         errSPN = valueQml[29];
         errFMI = valueQml[30];
@@ -177,10 +191,9 @@ void Modbus::updateData(QModbusDataUnit::RegisterType table, int address, int si
            qDebug() << data;
         }
         else qDebug() << "Open failed";
-        }
 
      }
-     emit varChanged();
+
 
      // play mp3 file
      if (file != valueQml[31]) {
@@ -228,6 +241,7 @@ void Modbus::updateData(QModbusDataUnit::RegisterType table, int address, int si
          player->setPosition(pos);
          player->play();
      }
+     emit varChanged();
      
 }
 

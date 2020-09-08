@@ -48,7 +48,7 @@ Rectangle
             x: 205
             y: 0
             color: night_mode? "white":"black"
-            text: Modbus.q_errSource
+            text: "0"
             fontSizeMode: Text.HorizontalFit
             font.pointSize: 24
             scale: 1
@@ -58,12 +58,13 @@ Rectangle
     }
     Text {
         y: 117
-        text: Modbus.q_errSource===1? "PORT":"STARPOARD"
+        text: "PORT"
         anchors.horizontalCenterOffset: 0
         fontSizeMode: Text.HorizontalFit
         font.pointSize: 24
         anchors.horizontalCenter: diagnostic_text.horizontalCenter
         scale: 1
+        color: night_mode? "white":"black"
         font.family: "Times New Roman"
     }
 

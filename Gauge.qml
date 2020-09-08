@@ -134,7 +134,7 @@ Item{
         anchors.margins: 10
         maximumValue: 32
         minimumValue: 0
-        value: Modbus.q_battery
+        value: Modbus.q_battery/100
         minorTickmarkCount: 6
         tickmarkStepSize: 32
         orientation: Qt.Horizontal
