@@ -78,6 +78,15 @@ Window {
 
     }
 
+    Rectangle
+    {
+        id: off_screen
+        anchors.fill: parent
+        color: "black"
+        z: 5
+        visible: Modbus.q_offScreen
+    }
+
 
 
 

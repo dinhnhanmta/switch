@@ -63,7 +63,7 @@ Item{
             horizontalAlignment: Text.AlignRight
             font.bold: true
             font.family: "Tahoma"
-            font.pointSize: 35
+            font.pointSize: 45
         }
     }
 

@@ -61,6 +61,7 @@ class Modbus : public QObject {
     Q_PROPERTY( int q_errFMICode READ getErrFMICode  NOTIFY errChanged)
 
     Q_PROPERTY( bool q_unitLocation READ getUnitLocation NOTIFY varChanged)
+    Q_PROPERTY( bool q_offScreen READ getOffScreen NOTIFY varChanged)
 
 
 public:
@@ -130,6 +131,7 @@ public:
      int getAvgFuelConsumption2  () {return avgFuelConsumption2;}
      bool getUnitLocation() {return unitLocation;}
      bool getErrVisible (){return errVisible;}
+     bool getOffScreen(){return offScreen;}
      int getErrSource () {
          /*if (errSource==0) return  "PORT";
          if (errSource==1) return "STARPOARD";
@@ -194,6 +196,7 @@ private:
     quint16 valueQml[100];
 public:
      bool errVisible;
+     bool offScreen;
 
 };
 

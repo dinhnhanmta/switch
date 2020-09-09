@@ -25,21 +25,21 @@ Item{
         Text {
             x: -41
             y: 17
-            width: 320
-            height: 129
+            width: 290
+            height: 122
             text:Modbus.q_engineSpeed
-            anchors.horizontalCenterOffset: 0
+            anchors.horizontalCenterOffset: -16
             font.bold: true
             horizontalAlignment: Text.AlignHCenter
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: parent.bottom
-            anchors.topMargin: -21
+            anchors.topMargin: 2
             font.family: "Tahoma"
             font.pointSize: 90
             color: night_mode===true? "white":"black"
         }
         Text {
-            x: 281
+            x: 297
             y: 84
             text: "RPM"
             font.family: "Tahoma"
@@ -50,8 +50,8 @@ Item{
     }
 
     Text {
-        x: 405
-        y: 395
+        x: 403
+        y: 419
         text: "Battery"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -82,7 +82,7 @@ Item{
     CircularGauge {
     id: oilpress_gauge
     x: -103
-    y: 192
+    y: 208
     width: 480
     height: 420
     scale: 0.4
@@ -330,7 +330,7 @@ Item{
             }
             valueBar: Rectangle {
                 implicitWidth: 15
-                color:night_mode===true? "white":"black"
+                color:night_mode===true? "black":"black"
 
             }
 
@@ -436,7 +436,7 @@ Item{
                 border.width: 5
             }
             valueBar: Rectangle {
-                color: night_mode===true? "white":"black"
+                color:night_mode===true? "black":"black"
                 implicitWidth: 15
             }
         }
@@ -512,7 +512,7 @@ Item{
                 border.width: 5
             }
             valueBar: Rectangle {
-                color: night_mode===true? "white":"black"
+                color: night_mode===true? "black":"black"
                 implicitWidth: 15
             }
         }

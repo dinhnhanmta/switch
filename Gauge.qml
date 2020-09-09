@@ -20,7 +20,7 @@ Item{
     height: 420
     scale: 0.7
     z: 1
-    value: Modbus.q_engineSpeed
+    value: Modbus.q_engineSpeed/100
     visible: true
     rotation: 0
     style: CircularGaugeStyle {
@@ -106,7 +106,7 @@ Item{
                 width: 172
                 height: 79
                 color: night_mode===true? "white":"black"
-                text: engineSpeed3.value*100
+                text: Modbus.q_engineSpeed
                 font.bold: true
                 font.pointSize: 51
                 horizontalAlignment: Text.AlignHCenter
@@ -153,7 +153,7 @@ Item{
                 }
                 valueBar: Rectangle {
                     implicitWidth: 15
-                    color:night_mode===true? "white":"black"
+                    color:night_mode===true? "black":"black"
                 }
                 tickmark: Item {
                      id: tick
@@ -195,7 +195,7 @@ Item{
         y: 12
         color: night_mode===true? "white":"black"
         text: qsTr("Battery")
-        font.pixelSize: 18
+        font.pixelSize: 20
     }
 
     Text {
@@ -214,7 +214,7 @@ Item{
         color: night_mode===true? "white":"black"
         text: qsTr("Coolant Temp")
         font.family: "Times New Roman"
-        font.pixelSize: 19
+        font.pixelSize: 20
     }
 
     Text {
@@ -244,7 +244,7 @@ Item{
             y: 364
             color: night_mode===true? "white":"black"
             text: qsTr("Oil Press")
-            font.pixelSize: 19
+            font.pixelSize: 20
         }
 
         Text {

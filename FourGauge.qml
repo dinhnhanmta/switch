@@ -20,7 +20,7 @@ Item{
     height: 496
     scale: 0.5
     z: 1
-    value: Modbus.q_engineSpeed
+    value: Modbus.q_engineSpeed/100
     visible: true
     rotation: 0
     style: CircularGaugeStyle {
@@ -108,7 +108,7 @@ Item{
                 width: 151
                 height: 79
                 color: night_mode===true? "white":"black"
-                text: engineSpeed2.value
+                text: Modbus.q_engineSpeed
                 font.bold: true
                 font.pointSize: 61
                 anchors.top: rpm.bottom
@@ -123,12 +123,12 @@ Item{
     CircularGauge {
     id: voltage_gauge
     x: 161
-    y: 159
+    y: 171
     width: 480
     height: 420
     scale: 0.4
     z: 1
-    value: Modbus.q_battery
+    value: Modbus.q_battery/100
     visible: true
     rotation: 0
     style: CircularGaugeStyle {
@@ -207,11 +207,11 @@ Item{
                 anchors.horizontalCenterOffset: 0
                 font.pointSize: 28
                 anchors.top: parent.verticalCenter
-                anchors.topMargin: 46
+                anchors.topMargin: 54
                 anchors.horizontalCenter: parent.horizontalCenter
         }
     Text {
-        y: 291
+        y: 311
 
                 width: 151
                 height: 79
@@ -240,6 +240,8 @@ Item{
             y: 29
             text: Modbus.q_engineLoad
             font.bold: true
+            anchors.horizontalCenter: parent.horizontalCenter
+            horizontalAlignment: Text.AlignHCenter
             font.family: "Tahoma"
             font.pointSize: 35
             color: night_mode===true? "white":"black"
@@ -404,7 +406,7 @@ Item{
             color:  night_mode===true? "white":"black"
         }
         tickmark: Rectangle {
-                        visible: styleData.value === 33 ||styleData.value === 52 ||styleData.value === 70 ||styleData.value === 108 ||styleData.value === 89
+                        visible: styleData.value === -3 ||styleData.value === 24 ||styleData.value === 50 ||styleData.value === 76 ||styleData.value === 103
                         implicitWidth: outerRadius * 0.03
                         antialiasing: true
                         implicitHeight: outerRadius * 0.1

@@ -59,6 +59,7 @@ Modbus::Modbus() {
    valueQml[32] =50;
 
    unitLocation = false;
+   offScreen = false;
    emit varChanged();
    emit errChanged();
 }
@@ -150,7 +151,8 @@ void Modbus::updateData(QModbusDataUnit::RegisterType table, int address, int si
 
      if (valueQml[34] == 0) unitLocation = false;
      if (valueQml[34] == 1) unitLocation = true;
-
+     if (valueQml[35] == 1) offScreen = true;
+     if (valueQml[35] == 0) offScreen = false;
      if (valueQml[28]!=errSource || valueQml[29]!=errSPN || valueQml[30] != errFMI)
      {
         if (valueQml[28]==1)
