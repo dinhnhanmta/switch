@@ -14,7 +14,7 @@ Item{
     height: 600
     scale: 1
     Text {
-        y: 8
+        y: 4
         text: "ENGINE SPEED"
         anchors.horizontalCenterOffset: -128
         fontSizeMode: Text.HorizontalFit
@@ -25,7 +25,7 @@ Item{
         color: night_mode===true? "white":"black"
         Text {
             x: -97
-            y: 38
+            y: 37
             width: 378
             height: 120
             text: Modbus.q_engineSpeed

@@ -12,7 +12,7 @@ Item{
     CircularGauge {
     id: rmpGauge
     x: 169
-    y: -79
+    y: -82
     width: 480
     height: 420
     scale: 0.5
@@ -118,7 +118,7 @@ Item{
     CircularGauge {
     id: voltage_gauge
     x: 169
-    y: 116
+    y: 119
     width: 480
     height: 420
     scale: 0.4
@@ -223,7 +223,7 @@ Item{
 
     Text {
         x: 330
-        y: 402
+        y: 405
         text: "Engine Load"
         font.family: "Helvetica"
         font.pointSize: 19

@@ -134,7 +134,7 @@ Item{
             x: 358
             y: 0
             color: night_mode===true? "white":"black"
-            text: "Port"
+            text: "PORT"
             font.pointSize: 18
             font.family: "Tahoma"
         }

@@ -20,7 +20,7 @@ Item{
     height: 496
     scale: 0.5
     z: 1
-    value: Modbus.q_engineSpeed/100
+    value: Modbus.q_engineSpeed
     visible: true
     rotation: 0
     style: CircularGaugeStyle {
@@ -123,7 +123,7 @@ Item{
     CircularGauge {
     id: voltage_gauge
     x: 161
-    y: 152
+    y: 159
     width: 480
     height: 420
     scale: 0.4
@@ -237,7 +237,7 @@ Item{
         color: night_mode===true? "white":"black"
         Text {
             x: 81
-            y: 30
+            y: 29
             text: Modbus.q_engineLoad
             font.bold: true
             font.family: "Tahoma"
@@ -258,7 +258,7 @@ Item{
     CircularGauge {
     id: oilpress_gauge
     x: -103
-    y: 218
+    y: 221
     width: 480
     height: 420
     scale: 0.4
@@ -365,7 +365,7 @@ Item{
     CircularGauge {
     id: coolant_gauge
     x: -103
-    y: 18
+    y: 9
     width: 480
     height: 420
     scale: 0.4

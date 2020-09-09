@@ -15,7 +15,7 @@ Item{
     property bool night_mode: false
     Text {
         x: 247
-        y: 8
+        y: 2
         text: "ENGINE SPEED"
         fontSizeMode: Text.HorizontalFit
         scale: 1
@@ -28,18 +28,19 @@ Item{
             width: 320
             height: 129
             text:Modbus.q_engineSpeed
+            anchors.horizontalCenterOffset: 0
             font.bold: true
             horizontalAlignment: Text.AlignHCenter
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: parent.bottom
-            anchors.topMargin: 10
+            anchors.topMargin: -21
             font.family: "Tahoma"
             font.pointSize: 90
             color: night_mode===true? "white":"black"
         }
         Text {
             x: 281
-            y: 89
+            y: 84
             text: "RPM"
             font.family: "Tahoma"
             font.pointSize: 28
@@ -49,8 +50,8 @@ Item{
     }
 
     Text {
-        x: 319
-        y: 394
+        x: 405
+        y: 395
         text: "Battery"
         font.family: "Helvetica"
         font.pointSize: 19
@@ -283,7 +284,7 @@ Item{
                 width: 235
                 height: 92
                 color: night_mode===true? "white":"black"
-                text: coolant_gauge.value
+                text: "0"
                 anchors.horizontalCenterOffset: 1
                 font.bold: true
                 horizontalAlignment: Text.AlignHCenter
@@ -368,8 +369,9 @@ Item{
         }
         Text {
             anchors.horizontalCenter: parent.horizontalCenter
-            y: -27
+            y: -31
             text: "Boost Pres"
+            anchors.horizontalCenterOffset: -1
             font.family: "Helvetica"
             font.pointSize: 16
             color: night_mode===true? "white":"black"}
@@ -441,9 +443,10 @@ Item{
         maximumValue: 100
         Text {
             anchors.horizontalCenter: parent.horizontalCenter
-            y: -27
+            y: -32
             color: night_mode===true? "white":"black"
             text: "Engine Load"
+            anchors.horizontalCenterOffset: 0
             font.family: "Helvetica"
             font.pointSize: 16
         }
@@ -516,9 +519,10 @@ Item{
         maximumValue: 200
         Text {
             anchors.horizontalCenter: parent.horizontalCenter
-            y: -27
+            y: -30
             color: night_mode===true? "white":"black"
             text: "Fuel Rate"
+            anchors.horizontalCenterOffset: 0
             font.family: "Helvetica"
             font.pointSize: 16
         }
