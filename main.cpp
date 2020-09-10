@@ -8,8 +8,8 @@
 
 #define INCREASE_BUTTON 7
 #define DECREASE_BUTTON 9
-#define MODE_BUTTON 8
-#define RING_BUTTON 0
+#define MODE_BUTTON 0
+#define RING_BUTTON 8
 
 int main(int argc, char *argv[])
 {

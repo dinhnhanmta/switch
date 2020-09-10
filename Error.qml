@@ -54,8 +54,8 @@ Rectangle
             scale: 1
             font.family: "Times New Roman"
         }
-
     }
+
     Text {
         y: 117
         text: "PORT"

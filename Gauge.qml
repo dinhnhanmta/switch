@@ -52,6 +52,7 @@ Item{
             antialiasing: true
             color:  night_mode===true? "white":"black"
         }
+
         tickmark: Rectangle {
                         visible: styleData.value < 80 || styleData.value % 10 == 0
                         implicitWidth: outerRadius * 0.02
@@ -59,6 +60,7 @@ Item{
                         implicitHeight: outerRadius * 0.06
                         color:  night_mode===true? "white":"black"
                     }
+
         minorTickmark: Rectangle {
                         visible: styleData.value < 0
                         implicitWidth: outerRadius * 0.01
@@ -213,7 +215,7 @@ Item{
         y: 364
         color: night_mode===true? "white":"black"
         text: qsTr("Coolant Temp")
-        font.family: "Times New Roman"
+        font.family: "Ubuntu"
         font.pixelSize: 20
     }
 

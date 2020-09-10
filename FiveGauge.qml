@@ -15,7 +15,7 @@ Item{
     property bool night_mode: false
     Text {
         x: 247
-        y: 2
+        y: 0
         text: "ENGINE SPEED"
         fontSizeMode: Text.HorizontalFit
         scale: 1
@@ -33,14 +33,14 @@ Item{
             horizontalAlignment: Text.AlignHCenter
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: parent.bottom
-            anchors.topMargin: 2
+            anchors.topMargin: -25
             font.family: "Tahoma"
             font.pointSize: 90
             color: night_mode===true? "white":"black"
         }
         Text {
             x: 297
-            y: 84
+            y: 76
             text: "RPM"
             font.family: "Tahoma"
             font.pointSize: 28
@@ -443,7 +443,7 @@ Item{
         maximumValue: 100
         Text {
             anchors.horizontalCenter: parent.horizontalCenter
-            y: -32
+            y: -33
             color: night_mode===true? "white":"black"
             text: "Engine Load"
             anchors.horizontalCenterOffset: 0
@@ -519,7 +519,7 @@ Item{
         maximumValue: 200
         Text {
             anchors.horizontalCenter: parent.horizontalCenter
-            y: -30
+            y: -31
             color: night_mode===true? "white":"black"
             text: "Fuel Rate"
             anchors.horizontalCenterOffset: 0

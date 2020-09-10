@@ -117,7 +117,7 @@ Item{
 
     Text {
         id: text3
-        x: 8
+        x: 22
         y: 361
         color: "black"
         text: qsTr("Coolant Temp")
@@ -145,7 +145,7 @@ Item{
 
         Text {
             id: text4
-            x: 206
+            x: 207
             y: 361
             color: "black"
             text: qsTr("Oil Press")
